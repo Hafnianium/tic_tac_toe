@@ -28,7 +28,7 @@ module TicTacToe
   end
 
   class Game
-    attr_accessor :player1, :player2, :turn, :board
+    attr_accessor :player1, :player2, :board
 
     @@winning_positions = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8],
@@ -132,7 +132,7 @@ module TicTacToe
     def game_start #creates and runs a game
       board = Board.new
       player1, player2 = Player.new(@name1), Player.new(@name2)
-      game = Game.new(player1, player2, board)
+      Game.new(player1, player2, board)
     end
   end
   TicTacToePlayer.new
